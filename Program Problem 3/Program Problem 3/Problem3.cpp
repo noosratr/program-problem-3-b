@@ -24,7 +24,7 @@ void pause() {
 
 	cout << "Press any key to continue . . .";
 
-	
+
 
 	while (!_kbhit());
 
@@ -42,27 +42,27 @@ void main() {
 	int B;
 	int C;
 
+	for (int i = 30; i < 30; i++) {
+		cout << "Give me a 3-digit number: " << endl;
+			cin >> x;
 
-	cout << "Give me a 3-digit number: ";
-	cin >> x;
+			C = x % 10;
+			B = (x / 10) % 10;
+			A = (x / 100);
 
-	C = x % 10;
-	B = (x / 10) % 10;
-	A = (x / 100);
+			if (A > B && B > C) {
+				cout << x << " is descending" << endl;
+			}
 
-	if (A > B && B > C) {
-		cout << "Descending" << endl;
+			else if (C > B && B > A) {
+				cout << x << " is ascending" << endl;
+			}
+
+			else {
+
+				cout << x << " is neither ascending or descending" << endl;
+			}
+
 	}
-	
-	else if (C > B && B > A) {
-		cout << "Ascending" << endl;
-	}
-
-	else {
-
-		cout << "Neither" << endl;
-	}
-
-
 	pause(); // pauses to see the displayed text
 }
